@@ -3,4 +3,27 @@ get checkout -b feature-update
 mkdir reports
 cd reports
 touch summary.md
-nano summary.md
+nano summary.md "This document provides a summary of the project updates."
+git add .
+git status
+git commit -m "Add reports directory"
+touch file{1,2,3}.txt
+ls
+cd ..
+mv data/raw-data.csv data/input-data.csv
+ls data
+cd scripts
+mkdir backup && cp *.py backup/ 
+ls backup
+cd ..
+rm docs/documentation.md
+ls docs
+git add .
+git status
+git commit -m "Update project files"
+touch .gitignore
+echo "temp/" >> .gitignore 
+echo "dataset0?.csv" >> .gitignore
+cat .gitignore
+git add . && git commit -m "Add .gitignore file"
+git push origin main
